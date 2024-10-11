@@ -55,20 +55,6 @@
             </div>
         </section>
 
-        <section id="ai-assistant">
-            <div class="container">
-                <h2 class="text-center mb-3">AI助手</h2>
-                <p class="text-center mb-4">我是EXDER的AI助手，可以回答关于EXDER的技能、经历和项目的问题。有什么想了解的吗？</p>
-                <div class="ai-chat">
-                    <div id="chat-messages" class="chat-messages"></div>
-                    <div class="chat-input">
-                        <input type="text" id="user-input" placeholder="输入您的问题...">
-                        <button id="send-button">发送</button>
-                    </div>
-                </div>
-            </div>
-        </section>
-
         <section id="about">
             <div class="container">
                 <h2>关于我</h2>
@@ -143,5 +129,28 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>
+
+    <!-- 在 <body> 标签的末尾，</footer> 之前添加以下代码 -->
+    <div id="ai-assistant-button" class="ai-assistant-button">
+        <i class="fas fa-robot"></i>
+        <span>AI助手</span>
+    </div>
+
+    <div id="ai-assistant-modal" class="ai-assistant-modal">
+        <div class="ai-assistant-header">
+            <h2>AI助手</h2>
+            <button id="close-ai-assistant" class="close-button">&times;</button>
+        </div>
+        <div class="ai-assistant-content">
+            <p>我是EXDER的AI助手，可以回答关于EXDER的技能、经历和项目的问题。有什么想了解的吗？</p>
+            <div class="ai-chat">
+                <div id="chat-messages" class="chat-messages"></div>
+            </div>
+            <div class="chat-input">
+                <input type="text" id="user-input" placeholder="输入您的问题...">
+                <button id="send-button">发送</button>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

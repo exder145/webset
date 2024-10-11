@@ -196,6 +196,7 @@ section, #ai-assistant, #contact {
 .copy-notification {
     background-color: #bb86fc;
     color: #121212;
+    box-shadow: 0 2px 10px rgba(255, 255, 255, 0.1);
 }
 
 /* 添加回到顶部按钮的暗色模式样式 */
@@ -205,6 +206,39 @@ section, #ai-assistant, #contact {
 }
 
 #back-to-top:hover {
+    background-color: #3700b3;
+    color: #e0e0e0;
+}
+
+.ai-assistant-modal {
+    background-color: #1e1e1e;
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.1);
+}
+
+.ai-assistant-header {
+    background-color: #bb86fc;
+}
+
+.ai-assistant-content {
+    color: #e0e0e0;
+}
+
+.chat-messages {
+    background-color: #2c2c2c;
+}
+
+#user-input {
+    background-color: #333333;
+    border-color: #4d4d4d;
+    color: #e0e0e0;
+}
+
+#send-button {
+    background-color: #bb86fc;
+    color: #121212;
+}
+
+#send-button:hover {
     background-color: #3700b3;
     color: #e0e0e0;
 }
