@@ -3,11 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EXDER的个人网站</title>
+    <title data-translate="page-title">EXDER的个人网站</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="dark-mode.css" id="theme-style" disabled>
+    <link rel="stylesheet" href="dark-mode.css" id="theme-style">
+    <script>
+    window.onerror = function(message, source, lineno, colno, error) {
+        console.error("JavaScript错误: ", message, "在文件", source, "第", lineno, "行");
+        alert("页面加载出错，请查看控制台以获取详细信息。");
+    };
+    </script>
+    <script>
+    window.addEventListener('load', function() {
+        console.log('页面完全加载');
+        document.body.style.opacity = '1';
+    });
+
+    window.addEventListener('error', function(e) {
+        console.error('资源加载错误:', e.target.src || e.target.href);
+    }, true);
+    </script>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
@@ -49,15 +65,15 @@
     <main>
         <section id="home" class="hero">
             <div class="container">
-                <h1>EXDER</h1>
-                <p>前端开发工程师 | 设计爱好者</p>
+                <h1 data-translate="name">EXDER</h1>
+                <p data-translate="job-title">前端开发工程师 | 设计爱好者</p>
                 <a href="#ai-assistant" class="btn btn-primary" data-translate="use-ai-assistant">使用AI助手了解我</a>
             </div>
         </section>
 
         <section id="about">
             <div class="container">
-                <h2>关于我</h2>
+                <h2 data-translate="about-me">关于我</h2>
                 <p>我是<strong>北京科技大学计算机专业</strong>的大三在读生，所属的<strong>211工程重点高校</strong>让我打下了扎实的理论基础。我<strong>热爱编程</strong>，擅长使用<strong>Python、C、Java</strong>等主流编程语言，能够有效地解决实际问题。除此之外，我对<strong>前端开发</strong>也充满好奇，通过自学掌握了<strong>HTML、CSS和JavaScript</strong>，具备一定的前后端联调能力。</p>
                 <p>除了技术能力，我还拥有<strong>卓越的英语水平</strong>，已通过<strong>CET-4（优秀）和CET-6（良好）</strong>，能流利地进行中英文沟通，阅读英文技术文档与学术论文毫无障碍。团队合作方面，我参与过多个项目，具备<strong>良好的跨部门沟通能力</strong>和<strong>出色的协作精神</strong>。</p>
                 <p>在2021年的<strong>摇篮杯大学生创新创业竞赛</strong>中，我带领团队获得了<strong>二等奖</strong>，项目的成功展示了我们的创新精神和扎实的技术能力。面对挑战时，我充满<strong>责任感</strong>和<strong>自我驱动力</strong>，持续学习新技术，并积极探索如何将前沿科技应用于实际问题解决。</p>
@@ -81,7 +97,7 @@
 
         <section id="skills">
             <div class="container">
-                <h2>技能</h2>
+                <h2 data-translate="skills">技能</h2>
                 <ul>
                     <li><strong>编程语言精通</strong>：熟练掌握Python、C、Java等主流编程语言，能够编写高效、可靠的代码，灵活解决各种问题。</li>
                     <li><strong>英语水平</strong>：通过CET-4（优秀）和CET-6（良好），能够流畅进行中英文沟通，轻松阅读英文技术文档和学术论文。</li>
@@ -94,7 +110,7 @@
 
         <section id="testimonials">
             <div class="container">
-                <h2>推荐</h2>
+                <h2 data-translate="recommendations">推荐</h2>
                 <!-- 在这里添加推荐/评价的内容 -->
             </div>
         </section>
@@ -112,45 +128,138 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2023 EXDER. 保留所有权利。</p>
+            <p data-translate="copyright">&copy; 2023 EXDER. 保留所有权利。</p>
             <!-- 在这里添加社交媒体链接 -->
         </div>
     </footer>
 
-    <button id="back-to-top" title="回到顶部">
+    <button id="back-to-top" title="回到顶部" data-translate="back-to-top">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
             <polyline points="18 15 12 9 6 15"></polyline>
         </svg>
     </button>
 
-    <div id="particles-js"></div>
-
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <canvas id="background-canvas"></canvas>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>
 
-    <!-- 在 <body> 标签的末尾，</footer> 之前添加以下代码 -->
+    <!-- 将这部分代码移到 <main> 标签之后，</body> 标签之前 -->
     <div id="ai-assistant-button" class="ai-assistant-button">
         <i class="fas fa-robot"></i>
-        <span>AI助手</span>
+        <span data-translate="ai-assistant">AI助手</span>
     </div>
 
     <div id="ai-assistant-modal" class="ai-assistant-modal">
-        <div class="ai-assistant-header">
-            <h2>AI助手</h2>
-            <button id="close-ai-assistant" class="close-button">&times;</button>
-        </div>
         <div class="ai-assistant-content">
-            <p>我是EXDER的AI助手，可以回答关于EXDER的技能、经历和项目的问题。有什么想了解的吗？</p>
+            <div class="ai-assistant-header">
+                <h2 data-translate="ai-assistant">AI助手</h2>
+                <button id="close-ai-assistant" class="close-button">&times;</button>
+            </div>
+            <p data-translate="ai-assistant-intro">我是EXDER的AI助手，可以回答关于EXDER的技能、经历和项目的问题。有什么想了解的吗？</p>
             <div class="ai-chat">
                 <div id="chat-messages" class="chat-messages"></div>
             </div>
             <div class="chat-input">
-                <input type="text" id="user-input" placeholder="输入您的问题...">
-                <button id="send-button">发送</button>
+                <input type="text" id="user-input" placeholder="输入您的问题..." data-translate="input-placeholder">
+                <button id="send-button" data-translate="send">发送</button>
             </div>
         </div>
     </div>
+
+    <!-- 在 </body> 标签之前添加以下代码 -->
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        console.log('DOM fully loaded');
+        // 检查重要元素是否存在
+        console.log('Navbar:', document.querySelector('.navbar'));
+        console.log('Main content:', document.querySelector('main'));
+        console.log('AI assistant button:', document.getElementById('ai-assistant-button'));
+    });
+    </script>
+
+    <!-- 在 </body> 标签之前添加以下代码 -->
+    <script>
+    !function() {
+        function n(n, e, t) {
+            return n.getAttribute(e) || t
+        }
+        function e(n) {
+            return document.getElementsByTagName(n)
+        }
+        function t() {
+            var t = e("script"),
+            o = t.length,
+            i = t[o - 1];
+            const theme = document.body.classList.contains('dark-mode') ? 'dark' : 'light';
+            let color = theme === "dark" ? "255,255,255" : "0,0,0";
+            return {
+                l: o,
+                z: n(i, "zIndex", -1),
+                o: n(i, "opacity", .5),
+                c: n(i, "color", color),
+                n: n(i, "count", 100)
+            }
+        }
+        function o() {
+            a = m.width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth,
+            c = m.height = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight
+        }
+        function i() {
+            r.clearRect(0, 0, a, c);
+            var n, e, t, o, m, l;
+            s.forEach(function(i, x) {
+                for (i.x += i.xa, i.y += i.ya, i.xa *= i.x > a || i.x < 0 ? -1 : 1, i.ya *= i.y > c || i.y < 0 ? -1 : 1, r.fillRect(i.x - .5, i.y - .5, 1, 1), e = x + 1; e < u.length; e++) n = u[e],
+                null !== n.x && null !== n.y && (o = i.x - n.x, m = i.y - n.y, l = o * o + m * m, l < n.max && (n === y && l >= n.max / 2 && (i.x -= .03 * o, i.y -= .03 * m), t = (n.max - l) / n.max, r.beginPath(), r.lineWidth = t / 2, r.strokeStyle = "rgba(" + d.c + "," + (t + .2) + ")", r.moveTo(i.x, i.y), r.lineTo(n.x, n.y), r.stroke()))
+            }),
+            x(i)
+        }
+        var a, c, u, m = document.getElementById("background-canvas"),
+        d = t(),
+        l = "c_n" + d.l,
+        r = m.getContext("2d"),
+        x = window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || window.oRequestAnimationFrame || window.msRequestAnimationFrame ||
+        function(n) {
+            window.setTimeout(n, 1e3 / 45)
+        },
+        w = Math.random,
+        y = {
+            x: null,
+            y: null,
+            max: 2e4
+        };
+        m.id = l,
+        m.style.cssText = "position:fixed;top:0;left:0;z-index:" + d.z + ";opacity:" + d.o,
+        o(),
+        window.onresize = o,
+        window.onmousemove = function(n) {
+            n = n || window.event,
+            y.x = n.clientX,
+            y.y = n.clientY
+        },
+        window.onmouseout = function() {
+            y.x = null,
+            y.y = null
+        };
+        for (var s = [], f = 0; d.n > f; f++) {
+            var h = w() * a,
+            g = w() * c,
+            v = 2 * w() - 1,
+            p = 2 * w() - 1;
+            s.push({
+                x: h,
+                y: g,
+                xa: v,
+                ya: p,
+                max: 6e3
+            })
+        }
+        u = s.concat([y]),
+        setTimeout(function() {
+            i()
+        },
+        100)
+    } ();
+    </script>
 </body>
 </html>

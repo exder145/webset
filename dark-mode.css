@@ -11,6 +11,69 @@ body {
     background-attachment: fixed;
 }
 
+body.dark-mode {
+    background-color: #333;
+    color: #fff;
+}
+
+body.dark-mode .navbar {
+    background-color: #222 !important;
+}
+
+body.dark-mode .navbar-light .navbar-nav .nav-link {
+    color: #fff;
+}
+
+body.dark-mode .hero {
+    background-color: #444;
+}
+
+body.dark-mode section {
+    background-color: rgba(51, 51, 51, 0.9);
+}
+
+body.dark-mode h1, body.dark-mode h2 {
+    color: #4d94ff;
+}
+
+body.dark-mode .btn-primary {
+    background-color: #4d94ff;
+    border-color: #4d94ff;
+}
+
+body.dark-mode .btn-primary:hover {
+    background-color: #0066cc;
+    border-color: #0066cc;
+}
+
+body.dark-mode footer {
+    background-color: #222;
+    color: #fff;
+}
+
+body.dark-mode .ai-assistant-button {
+    background-color: #4d94ff;
+}
+
+body.dark-mode .ai-assistant-modal {
+    background-color: #444;
+    color: #fff;
+}
+
+body.dark-mode .chat-messages {
+    background-color: #333;
+}
+
+body.dark-mode #user-input {
+    background-color: #555;
+    color: #fff;
+    border-color: #777;
+}
+
+body.dark-mode #send-button {
+    background-color: #4d94ff;
+}
+
 .navbar {
     background-color: rgba(30, 30, 30, 0.8) !important;
     backdrop-filter: blur(5px);
@@ -25,9 +88,21 @@ body {
     color: #bb86fc;
 }
 
+body.dark-mode .navbar {
+    background-color: #222 !important;
+}
+
+body.dark-mode .navbar-light .navbar-nav .nav-link {
+    color: #fff;
+}
+
 .hero {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('your-background-image.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://source.unsplash.com/random/1600x900');
     color: #e0e0e0;
+}
+
+body.dark-mode .hero {
+    background-color: #444;
 }
 
 .hero::before {
@@ -242,3 +317,89 @@ section, #ai-assistant, #contact {
     background-color: #3700b3;
     color: #e0e0e0;
 }
+
+/* 亮色模式样式 */
+body.light-mode {
+    background-color: #e6f2ff;
+    color: #333;
+}
+
+body.light-mode .navbar {
+    background-color: rgba(255, 255, 255, 0.9) !important;
+}
+
+body.light-mode .navbar-light .navbar-nav .nav-link {
+    color: #333;
+}
+
+body.light-mode .hero {
+    background-color: #f8f9fa;
+}
+
+body.light-mode section {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+body.light-mode h1, body.light-mode h2 {
+    color: #0066cc;
+}
+
+body.light-mode .btn-primary {
+    background-color: #4d94ff;
+    border-color: #4d94ff;
+}
+
+body.light-mode .btn-primary:hover {
+    background-color: #0066cc;
+    border-color: #0066cc;
+}
+
+body.light-mode footer {
+    background-color: #b3d9ff;
+    color: #0066cc;
+}
+
+/* 暗色模式样式 */
+body.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+body.dark-mode .navbar {
+    background-color: rgba(30, 30, 30, 0.8) !important;
+}
+
+body.dark-mode .navbar-light .navbar-nav .nav-link {
+    color: #e0e0e0;
+}
+
+body.dark-mode .hero {
+    background-color: #444;
+}
+
+body.dark-mode section {
+    background-color: rgba(51, 51, 51, 0.9);
+}
+
+body.dark-mode h1, body.dark-mode h2 {
+    color: #bb86fc;
+}
+
+body.dark-mode .btn-primary {
+    background-color: #bb86fc;
+    border-color: #bb86fc;
+    color: #121212;
+}
+
+body.dark-mode .btn-primary:hover {
+    background-color: #3700b3;
+    border-color: #3700b3;
+    color: #e0e0e0;
+}
+
+body.dark-mode footer {
+    background-color: #222;
+    color: #e0e0e0;
+}
+
+/* 其他暗色模式样式保持不变 */
